@@ -23,7 +23,7 @@ function getGrade($score)
             return 'D';
             break;
         case ($score>=40 && $score<=44):
-            return 'F';
+            return 'E';
             break;
         case ($score>=0 && $score<=39):
             return 'F';
@@ -33,7 +33,7 @@ function getGrade($score)
     }
 }
 
-$grades=['A'=>0,'B'=>0,'C'=>0,'D'=>0,'F'=>0,'Invalid Score'=>0];
+$grades=['A'=>0,'B'=>0,'C'=>0,'D'=>0,'E' => 0,'F'=>0,'Invalid Score'=>0];
 
 if(is_numeric($grade1) && ($grade1>=0 && $grade1<=100))
 {
@@ -73,5 +73,5 @@ if(is_numeric($grade5) && ($grade5>=0 && $grade5<=100))
 print_r($grades);
 
 //redirect to from page with grade query strings
-//header('location:form.php?A='.$grades['A'].'&B='.$grades['B'].'&C='.$grades['C'].'&D='.$grades['D'].'&F='.$grades['F'].'&Invalid='.$grades['Invalid Score']);
+header('location:viewResultStats.php?A='.$grades['A'].'&B='.$grades['B'].'&C='.$grades['C'].'&D='.$grades['D']. '&E=' . $grades['E'].'&F='.$grades['F'].'&Invalid='.$grades['Invalid Score']);
 exit();
