@@ -12,6 +12,7 @@
        if(isset($_GET['message']) && !empty($_GET['message'])){
           echo "<em><strong>".$_GET['message']."</strong></em>";
        }
+       
      ?>
      <hr>
     <form action="submit.php" method="POST">
@@ -27,8 +28,8 @@
         <label for="gender">Gender:</label>
         <select id="gender" name="gender" required>
             <option value ="">Select Gender </option>
-            <option value="Male">Male</option>
-            <option value="Female">Female</option>
+            <option value="M">Male</option>
+            <option value="F">Female</option>
         </select><br><br>
         <input type="submit" value="Add Student">
     </form>

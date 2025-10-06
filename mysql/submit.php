@@ -1,7 +1,7 @@
 <?php
 
   include_once 'connection.php';
-
+  
 
     try
     {
@@ -11,10 +11,16 @@
             $email = validate_input('email',$_POST['email']);
             $gender = validate_input('gender',$_POST['gender']);
 
-            $sql = "INSERT INTO students (firstname, lastname, email, gender) VALUES (?, ?, ?, ?, ?, ?)";
+
+            $sql = "INSERT INTO students (firstname, lastname, email, gender) VALUES (?, ?, ?, ?)";
 
             $stmt = $conn->prepare($sql);
-            $stmt->bind_param("sssss", $firstname, $lastname, $email, $gender);
+            $stmt->bind_param("ssss", $firstname, $lastname, $email, $gender);
+
+            //i inteer
+            //s string
+            //d double
+            //b blob
 
             if ($stmt->execute() === TRUE) {
                 report("New student record added successfully");
@@ -25,7 +31,7 @@
             $conn->close();
         }
     }
-        catch(Exception $e)
+    catch(Exception $e)
     {
         report("Error: " . $e->getMessage());
     }
