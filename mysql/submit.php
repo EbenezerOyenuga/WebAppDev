@@ -1,7 +1,7 @@
 <?php
 
   include_once 'connection.php';
-
+  
 
     try
     {
@@ -26,7 +26,7 @@
             $conn->close();
         }
     }
-        catch(Exception $e)
+    catch(Exception $e)
     {
         report("Error: " . $e->getMessage());
     }
