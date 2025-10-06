@@ -10,7 +10,7 @@
     <hr>
     <?php 
        if(isset($_GET['message']) && !empty($_GET['message'])){
-          echo $_GET['message'];
+          echo "<em><strong>".$_GET['message']."</strong></em>";
        }
      ?>
      <hr>

@@ -13,5 +13,5 @@ function validate_input($field_name,$data, $required = true) {
 
   function report($message)
   {
-     header('Location: form.php?message=' . urlencode($message));
+     header('Location: student.php?message=' . urlencode($message));
   }
