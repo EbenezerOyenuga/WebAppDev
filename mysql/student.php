@@ -36,7 +36,7 @@
     <hr>
     <h3>View Student Records</h3>
     <hr>
-    <table>
+    <table border="1" cellpadding="10" cellspacing="0">
         <thead>
             <tr>
                 <th>ID</th>
@@ -52,6 +52,7 @@
                $sql = "SELECT * FROM students"; //or "SELECT id, firstname, lastname, email, gender FROM students" //we can select specific columns from the database table
                $result = $conn->query($sql);
                 if ($result->num_rows > 0) {
+                    //['rtyr',1,"orange",false]; ["firstname"=>"john", "lastname"=>"doe", "age"=>30, "is_student"=>false]
                      while($row = $result->fetch_assoc()) {
                           echo "<tr>
                                  <td>".$row["id"]."</td>
