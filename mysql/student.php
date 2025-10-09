@@ -1,21 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Forms</title>
 </head>
+
 <body>
     <h1>Add New Students Record</h1>
     <hr>
-    <?php 
-       if(isset($_GET['message']) && !empty($_GET['message'])){
-          echo "<em><strong>".$_GET['message']."</strong></em>";
-       }
-       
-     ?>
-     <hr>
+    <?php
+    if (isset($_GET['message']) && !empty($_GET['message'])) {
+        echo "<em><strong>" . $_GET['message'] . "</strong></em>";
+    }
+    ?>
+    <hr>
     <form action="submit.php" method="POST">
+        <label for="matric_no">Matric Number:</label>
+        <input type="text" id="matric_no" name="matric_no" required><br><br>
+
         <label for="firstname">First Name:</label>
         <input type="text" id="firstname" name="firstname" required><br><br>
 
@@ -39,7 +43,7 @@
     <table border="1" cellpadding="10" cellspacing="0">
         <thead>
             <tr>
-                <th>ID</th>
+                <th>Matric Number</th>
                 <th>First Name</th>
                 <th>Last Name</th>
                 <th>Email</th>
@@ -48,25 +52,25 @@
         </thead>
         <tbody>
             <?php
-               include_once 'connection.php';
-               $sql = "SELECT * FROM students"; //or "SELECT id, firstname, lastname, email, gender FROM students" //we can select specific columns from the database table
-               $result = $conn->query($sql);
-                if ($result->num_rows > 0) {
-                    //['rtyr',1,"orange",false]; ["firstname"=>"john", "lastname"=>"doe", "age"=>30, "is_student"=>false]
-                     while($row = $result->fetch_assoc()) {
-                          echo "<tr>
-                                 <td>".$row["id"]."</td>
-                                 <td>".$row["firstname"]."</td>
-                                 <td>".$row["lastname"]."</td>
-                                 <td>".$row["email"]."</td>
-                                 <td>".$row["gender"]."</td>
+            include_once 'connection.php';
+            $sql = "SELECT * FROM students"; //or "SELECT id, firstname, lastname, email, gender FROM students" //we can select specific columns from the database table
+            $result = $conn->query($sql);
+            if ($result->num_rows > 0) {
+                while ($row = $result->fetch_assoc()) {
+                    echo "<tr>
+                                 <td>" . $row["matric_no"] . "</td>
+                                 <td>" . $row["firstname"] . "</td>
+                                 <td>" . $row["lastname"] . "</td>
+                                 <td>" . $row["email"] . "</td>
+                                 <td>" . $row["gender"] . "</td>
                              </tr>";
-                     }
-                 } else {
-                     echo "<tr><td colspan='5'>No records found</td></tr>";
-                 }
+                }
+            } else {
+                echo "<tr><td colspan='5'>No records found</td></tr>";
+            }
             ?>
         </tbody>
     </table>
 </body>
+
 </html>
