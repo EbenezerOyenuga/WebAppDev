@@ -1,3 +1,30 @@
+
+<?php
+    //Input Sanitization
+    //Casting
+    $A = $_GET['A'];
+    $A = (int) $A;
+
+    $B = $_GET['B'];
+    $B = (int) $B;
+
+    $C = $_GET['C'];
+    $C = (int) $C;
+
+    $D = $_GET['D'];
+    $D = (int) $D;
+
+    $E = $_GET['E'];
+    $E = (int) $E;
+
+    $F = $_GET['F'];
+    $F = (int) $F;
+
+    $Invalid_Score = $_GET['Invalid'];
+    $Invalid_Score = (int) $Invalid_Score;
+
+    // var_dump($Invalid_Score);
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -8,13 +35,13 @@
 </head>
 
 <body>
-    <table>
+    <table border="1px">
         <tr>
             <td>
                 A
             </td>
             <td>
-                <?php echo $_GET['A']; ?>
+                <?php echo $A; ?>
             </td>
         </tr>
         <tr>
@@ -22,7 +49,7 @@
                 B
             </td>
             <td>
-                <?php echo $_GET['B']; ?>
+                <?php echo $B; ?>
             </td>
         </tr>
         <tr>
@@ -30,7 +57,7 @@
                 C
             </td>
             <td>
-                <?php echo $_GET['C']; ?>
+                <?php echo $C; ?>
             </td>
         </tr>
         <tr>
@@ -38,7 +65,7 @@
                 D
             </td>
             <td>
-                <?php echo $_GET['D']; ?>
+                <?php echo $D; ?>
             </td>
         </tr>
         <tr>
@@ -46,7 +73,7 @@
                 E
             </td>
             <td>
-                <?php echo $_GET['E']; ?>
+                <?php echo $E; ?>
             </td>
         </tr>
         <tr>
@@ -54,7 +81,7 @@
                 F
             </td>
             <td>
-                <?php echo $_GET['F']; ?>
+                <?php echo $F; ?>
             </td>
         </tr>
         <tr>
@@ -62,7 +89,7 @@
                 Invalid Score
             </td>
             <td>
-                <?php echo $_GET['Invalid_Score']; ?>
+                <?php echo $Invalid_Score; ?>
             </td>
         </tr>
     </table>
