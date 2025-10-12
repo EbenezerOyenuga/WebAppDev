@@ -6,7 +6,7 @@ include_once 'utils.php';
 try{
     $host="localhost";
     $user="root";
-    $password="password";
+    $password="";
     $db="classwork_db";
 
     $conn=new mysqli($host,$user,$password,$db);
