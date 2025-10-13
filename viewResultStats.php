@@ -8,7 +8,11 @@
 </head>
 
 <body>
-    <table>
+    <table border="1">
+        <thead>
+            <th>Grade</th>
+            <th>Count</th>
+        </thead>
         <tr>
             <td>
                 A
@@ -62,7 +66,7 @@
                 Invalid Score
             </td>
             <td>
-                <?php echo $_GET['Invalid_Score']; ?>
+                <?php echo $_GET['Invalid']; ?>
             </td>
         </tr>
     </table>
