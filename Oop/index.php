@@ -12,8 +12,6 @@ use Oop\Current as Current;
 
 $user=new User('Akintunde Oluwaseyi John');
 $account=new Savings($user);
-$user2=new User('Oyinloye Bayo');
-$bayo=new Savings($user2);
 $account->deposit(10);
 $account->deposit(5);
 $account->deposit(20);
