@@ -4,17 +4,21 @@ class Book {
     public $title;
     public $author;
 
-    public function __construct($title, $author) {
-        $this->title = $title;
-        $this->author = $author;
+    public function __construct($book_title, $book_author) {
+        $this->title = $book_title;
+        $this->author = $book_author;
     }
 
     public function getDetails() {
-        return "Title: " . $this->title . ", Author: " . $this->author;
+        return "The Title of the book is: " . $this->title . ", and the Author is: " . $this->author;
+        //The title is "The Great Gatsby", and the author is F. Scott Fitzgerald.
     }
 }
 
-$book = new Book("1984", "George Orwell");
+$book = new Book("Animal Farm", "George Orwell");
+echo "Book title is: ".$book->title; //Animal Farm
+echo "</br>";
+echo "Book author is: ".$book->author; //George Orwell
 echo $book->getDetails();
 
 echo"<hr/>";

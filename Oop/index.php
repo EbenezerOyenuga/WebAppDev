@@ -24,5 +24,4 @@ $account->deposit(14.5);
 $account->withdraw(80);
 $account->deposit(23);
 echo $account->checkBalance();
-echo "<hr/>";
 echo $account->print_transactions();
