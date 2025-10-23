@@ -8,6 +8,7 @@ function validate_input($field_name,$data, $required = true) {
     $data = trim($data);
     $data = stripslashes($data);
     $data = htmlspecialchars($data);
+    //< &lt, > &gt
     return $data;
   }
 

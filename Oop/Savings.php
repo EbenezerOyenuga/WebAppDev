@@ -36,7 +36,7 @@ class Savings extends Account{
             }
             else
             {
-                $this->balance+=$amount;
+                $this->balance+=$amount; //$this->balance = $this->balance + $amount;
                 $this->record_transaction($this::Cr, $amount);
                 echo $this->account_name." You Deposited ".$amount." </br>";
             } 

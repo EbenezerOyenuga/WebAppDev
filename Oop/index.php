@@ -8,7 +8,16 @@ use Oop\Savings as Savings;
 use Oop\User as User;
 use Oop\Current as Current;
 
-
+$user = new User('John Doe');
+$account = new Current($user);
+$account->deposit(1000);
+$account->withdraw(2000);
+$account->deposit(-1000);
+$account->deposit(5000);
+$account->deposit(100000);
+echo $account->checkBalance();
+echo "<hr/>";
+echo $account->print_transactions();
 
 $user=new User('Akintunde Oluwaseyi John');
 $account=new Savings($user);

@@ -1,7 +1,9 @@
 <?php
 
+namespace Oop;
 require_once 'Account.php';
 require_once 'User.php';
+
 
 use Oop\Account as Account;
 use Oop\User as User;
