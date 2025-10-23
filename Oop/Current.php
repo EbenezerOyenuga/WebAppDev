@@ -1,6 +1,8 @@
 <?php
 
 namespace Oop;
+
+namespace Oop;
 require_once 'Account.php';
 require_once 'User.php';
 

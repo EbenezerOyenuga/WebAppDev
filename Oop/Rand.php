@@ -7,4 +7,9 @@ trait Rand{
       {
         return \uniqid();
       }
+
+      function rand_account_number()
+      {
+        return \rand(1000000000,9999999999);
+      }
   }

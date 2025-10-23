@@ -33,5 +33,20 @@ $account->deposit(14.5);
 $account->withdraw(80);
 $account->deposit(23);
 echo $account->checkBalance();
-echo "<hr/>";
 echo $account->print_transactions();
+
+$curr_account=new Current($user);
+$curr_account->deposit(100);
+$curr_account->withdraw(50);
+$curr_account->withdraw(70);
+echo $curr_account->checkBalance();
+echo $curr_account->print_transactions();
+
+
+$new_user=new User('Doe Jane');
+$new_curr_account=new Current($new_user);
+$new_curr_account->deposit(200);
+$new_curr_account->withdraw(150); 
+$new_curr_account->withdraw(1000);      
+echo $new_curr_account->checkBalance();
+echo $new_curr_account->print_transactions();
